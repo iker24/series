@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>premios</h1>
+
+    
+        <tbody>
+        {{ entity.nombrePremios }}<br>
+        <img src="{{ asset('bundles/uniseries/imagenes/'~ entity.fotoPremios  ~ '') }}" width=40% height=40%/><br><br>
+        {{ entity.descPremios }}<br>
+           
+           
+        </tbody>
+    
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('premios') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('premios_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}SeriesTop{% endblock %}</title>
+        {% block stylesheets %}
+        <link href="{{ asset('bundles/uniseries/css/series.css') }}" type="text/css" rel="stylesheet" />
+        
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="barracentro naranja">
+           {% block contenido %}
+         <a href="{{ path('series')}}"> Series</a>
+         <a href="{{ path('noticias')}}"> Noticias</a>
+        <a href="{{ path('premios')}}"> Premios</a>
+        <a href="{{ path('categorias')}}"> Categorias</a>
+        {% endblock %}
+       </div>
+         <div class="body" >{% block body %}
+        
+        
+        {% endblock %}
+         </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

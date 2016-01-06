@@ -1,0 +1,4 @@
+services:
+#    uni_series.example:
+#        class: uni\Bundle\SeriesBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

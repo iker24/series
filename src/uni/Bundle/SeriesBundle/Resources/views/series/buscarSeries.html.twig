@@ -1,0 +1,10 @@
+{% block cuerpo %}
+  
+<br>Buscar serie:
+<form action="{{path('series_responder')}}" method="POST">
+    <input type="text" name="nombreSeries" value="">
+    <input type="submit" value="OK">
+</form>
+      
+    
+{% endblock %}

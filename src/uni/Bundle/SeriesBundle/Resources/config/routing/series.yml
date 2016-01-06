@@ -1,0 +1,39 @@
+series:
+    path:     /
+    defaults: { _controller: "uniSeriesBundle:series:index" }
+
+series_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniSeriesBundle:series:show" }
+
+series_new:
+    path:     /new
+    defaults: { _controller: "uniSeriesBundle:series:new" }
+
+series_create:
+    path:     /create
+    defaults: { _controller: "uniSeriesBundle:series:create" }
+    requirements: { _method: post }
+
+series_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniSeriesBundle:series:edit" }
+
+series_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniSeriesBundle:series:update" }
+    requirements: { _method: post|put }
+
+series_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniSeriesBundle:series:delete" }
+    requirements: { _method: post|delete }
+    
+series_buscar:
+    path:     /buscar
+    defaults: { _controller: "uniSeriesBundle:series:buscarSeries" }
+
+series_responder:
+    path:     /responder
+    defaults: { _controller: "uniSeriesBundle:series:responderSeries" }
+    requirements: { _method: post|put }

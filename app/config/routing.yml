@@ -1,0 +1,4 @@
+uni_series:
+    resource: "@uniSeriesBundle/Resources/config/routing.yml"
+    prefix:   /
+

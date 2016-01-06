@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>noticias</h1>
+
+    
+    
+           {{ entity.tituloNoticias }}<br><br>
+            <img src="{{ asset('bundles/uniseries/imagenes/'~ entity.fotoNoticias  ~ '') }}" width=20% height=20%/><br>
+           {{ entity.descNoticias }}<br>
+           <br>
+           {{ entity.fechaNoticias|date('Y-m-d ') }}<br>
+           <br>
+           {{ entity.autorNoticias }}<br>
+            
+        
+    
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('noticias') }}">
+            Volver
+    </li>
+    <li>
+        <a href="{{ path('noticias_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

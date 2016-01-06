@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Premios de las series</h1>
+
+    
+        
+            
+        {% for entity in entities %}
+            
+            <a href="{{ path('premios_show', { 'id': entity.id }) }}">{{ entity.nombrePremios }}</a><br>
+               <br>
+                
+               <img src="{{ asset('bundles/uniseries/imagenes/'~ entity.fotoPremios  ~ '') }}" width=40% height=40%/><br>
+                
+               
+        {% endfor %}
+        
+    
+
+        <ul>
+        <li>
+            <a href="{{ path('premios_new') }}">
+                Crear nuevo Premio
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

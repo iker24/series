@@ -1,0 +1,19 @@
+uni_series_premios:
+    resource: "@uniSeriesBundle/Resources/config/routing/premios.yml"
+    prefix:   /premios
+
+uni_series_categorias:
+    resource: "@uniSeriesBundle/Resources/config/routing/categorias.yml"
+    prefix:   /categorias
+
+uni_series_noticias:
+    resource: "@uniSeriesBundle/Resources/config/routing/noticias.yml"
+    prefix:   /noticias
+
+uni_series_series:
+    resource: "@uniSeriesBundle/Resources/config/routing/series.yml"
+    prefix:   /series
+
+uni_series_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: uniSeriesBundle:Default:index }
