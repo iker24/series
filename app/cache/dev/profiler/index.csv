@@ -696,3 +696,10 @@ be4122,127.0.0.1,GET,http://www.series.com/app_dev.php/series/buscar,1452097095,
 02bb9f,127.0.0.1,GET,http://www.series.com/app_dev.php/premios/,1452097111,
 c730bf,127.0.0.1,GET,http://www.series.com/app_dev.php/series/buscar,1452097113,
 4448ed,127.0.0.1,GET,http://www.series.com/app_dev.php/series/,1452097119,
+e08806,127.0.0.1,GET,http://www.series.com/app_dev.php/,1452158630,
+c50047,127.0.0.1,GET,http://www.series.com/app_dev.php/series,1452158637,
+4bee19,127.0.0.1,GET,http://www.series.com/app_dev.php/series/,1452158638,ebbd7e
+ebbd7e,127.0.0.1,GET,http://www.series.com/app_dev.php/series/,1452158638,
+b7b04a,127.0.0.1,GET,http://www.series.com/app_dev.php/premios,1452158646,
+800588,127.0.0.1,GET,http://www.series.com/app_dev.php/premios/,1452158646,e19d90
+e19d90,127.0.0.1,GET,http://www.series.com/app_dev.php/premios/,1452158646,
