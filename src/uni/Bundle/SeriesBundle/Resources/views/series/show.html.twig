@@ -9,23 +9,18 @@
                 
         {{ entity.nombreSerie }}<br><br><br>
          <img src="{{ asset('bundles/uniseries/imagenes/'~ entity.foto  ~ '') }}" width=40% height=40%/><br><br>
-        {{ entity.sipnosis }}<br><br><br>
+         <p>{{ entity.sipnosis }}</p><br><br><br>
         {{ entity.fechaComienzo|date('Y-m-d ') }}<br><br>
             
 </tbody>
     
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('series') }}">
-            Volver a la pagina principal
-        </a>
-    </li>
-    <li>
+       
+    
         <a href="{{ path('series_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+    
+    {{ form(delete_form) }}
+
 {% endblock %}

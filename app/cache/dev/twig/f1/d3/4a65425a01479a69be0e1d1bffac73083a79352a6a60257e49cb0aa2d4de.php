@@ -40,37 +40,31 @@ class __TwigTemplate_f1d34a65425a01479a69be0e1d1bffac73083a79352a6a60257e49cb0aa
         // line 9
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl((("bundles/uniseries/imagenes/" . $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "fotoPremios")) . "")), "html", null, true);
         echo "\" width=40% height=40%/><br><br>
-        ";
+        <p>";
         // line 10
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "descPremios"), "html", null, true);
-        echo "<br>
+        echo "</p><br>
            
            
         </tbody>
     
 
-        <ul class=\"record_actions\">
-    <li>
+       
+  
+    
+    
         <a href=\"";
-        // line 18
-        echo $this->env->getExtension('routing')->getPath("premios");
-        echo "\">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href=\"";
-        // line 23
+        // line 20
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("premios_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id"))), "html", null, true);
         echo "\">
-            Edit
+            Editar
         </a>
-    </li>
-    <li>";
-        // line 27
+    
+    ";
+        // line 24
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
-        echo "</li>
-</ul>
+        echo "
+
 ";
     }
 
@@ -86,6 +80,6 @@ class __TwigTemplate_f1d34a65425a01479a69be0e1d1bffac73083a79352a6a60257e49cb0aa
 
     public function getDebugInfo()
     {
-        return array (  71 => 27,  64 => 23,  56 => 18,  45 => 10,  41 => 9,  37 => 8,  31 => 4,  28 => 3,);
+        return array (  65 => 24,  58 => 20,  45 => 10,  41 => 9,  37 => 8,  31 => 4,  28 => 3,);
     }
 }

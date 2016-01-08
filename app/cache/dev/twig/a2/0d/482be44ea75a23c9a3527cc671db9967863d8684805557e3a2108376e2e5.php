@@ -33,7 +33,7 @@ class __TwigTemplate_a20d482be44ea75a23c9a3527cc671db9967863d8684805557e3a210837
    
        
               
-         <tbody>
+         <tbody class=\"fondo\">
         ";
         // line 10
         $context['_parent'] = (array) $context;
@@ -90,6 +90,8 @@ class __TwigTemplate_a20d482be44ea75a23c9a3527cc671db9967863d8684805557e3a210837
             </a>
         </li>
     </ul>
+                
+   
     ";
     }
 

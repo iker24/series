@@ -1,12 +1,12 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Series</h1>
+   <h1>Series</h1>
 
    
        
               
-         <tbody>
+         <tbody class="fondo">
         {% for entity in entities %}
             
                 <a href="{{ path('series_show', { 'id': entity.id }) }}">{{ entity.nombreSerie }}</a>
@@ -34,4 +34,6 @@
             </a>
         </li>
     </ul>
+                
+   
     {% endblock %}
