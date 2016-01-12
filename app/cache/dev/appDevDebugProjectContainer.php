@@ -3037,6 +3037,7 @@ class appDevDebugProjectContainer extends Container
 
         $instance->addPath('/home/iker/symfony2/series/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views', 'Framework');
         $instance->addPath('/home/iker/symfony2/series/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views', 'Security');
+        $instance->addPath('/home/iker/symfony2/series/app/Resources/TwigBundle/views', 'Twig');
         $instance->addPath('/home/iker/symfony2/series/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views', 'Twig');
         $instance->addPath('/home/iker/symfony2/series/vendor/symfony/swiftmailer-bundle/Symfony/Bundle/SwiftmailerBundle/Resources/views', 'Swiftmailer');
         $instance->addPath('/home/iker/symfony2/series/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Resources/views', 'Doctrine');
@@ -3533,7 +3534,7 @@ class appDevDebugProjectContainer extends Container
             'kernel.root_dir' => '/home/iker/symfony2/series/app',
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
-            'kernel.name' => 'app',
+            'kernel.name' => 'ap_',
             'kernel.cache_dir' => '/home/iker/symfony2/series/app/cache/dev',
             'kernel.logs_dir' => '/home/iker/symfony2/series/app/logs',
             'kernel.bundles' => array(
