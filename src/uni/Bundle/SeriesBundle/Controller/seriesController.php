@@ -237,14 +237,15 @@ public function buscarSeriesAction()
 public function responderSeriesAction(Request $res)
     {
      //     $titulo= $_POST['titulo']; // Coger variables usando php clásico.
-         $nombreSerie= $res->request->get('nombreSerie'); // Modo symfony2
-         
+      $nombreSerie= $res->request->get('nombreSeries'); // Modo symfony2 
       $em = $this->getDoctrine()->getEntityManager();
       
-      $dql = "select n from uniSeriesBundle:series n where n.nombreSerie like :nombreSerie";
+      $dql = "select n from uniSeriesBundle:series n where n.nombreSerie = :nombreSeriePa";
       $respuesta = $em->createQuery($dql);
-      $respuesta->setParameter('nombreSerie',"%" . $nombreSerie . "%");
+      $respuesta->setParameter('nombreSeriePa',"%".$nombreSerie."%");
+      //$respuesta->setParameter('nombreSeriePa', $nombreSerie );
       $series = $respuesta->getResult();
+    
      
       
         return $this->render('uniSeriesBundle:series:responderSeries.html.twig', array(

@@ -28,3 +28,13 @@ noticias_delete:
     path:     /{id}/delete
     defaults: { _controller: "uniSeriesBundle:noticias:delete" }
     requirements: { _method: post|delete }
+
+
+noticias_buscar:
+    path:     /buscar
+    defaults: { _controller: "uniSeriesBundle:noticias:buscarNoticias" }
+
+noticias_responder:
+    path:     /responder
+    defaults: { _controller: "uniSeriesBundle:noticias:responderNoticias" }
+    requirements: { _method: post|put }

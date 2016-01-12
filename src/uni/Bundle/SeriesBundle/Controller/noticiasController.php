@@ -221,4 +221,30 @@ class noticiasController extends Controller
             ->getForm()
         ;
     }
+    
+    public function buscarNoticiasAction()
+    {
+        
+        return $this->render('uniSeriesBundle:noticias:buscarAutor.html.twig');
+    }
+    
+  public function responderNoticiasAction(Request $res)
+    {
+     //     $titulo= $_POST['titulo']; // Coger variables usando php clásico.
+         $autorNo= $res->request->get('autorNoticias'); // Modo symfony2
+         
+      $em = $this->getDoctrine()->getEntityManager();
+      
+      $dql = "select n from uniSeriesBundle:noticias n where n.autorNoticias like :autorNoticias";
+      $respuesta = $em->createQuery($dql);
+      $respuesta->setParameter('autorNoticias',"%" . $autorNo . "%");
+      $noticias = $respuesta->getResult();
+     
+      
+        return $this->render('uniSeriesBundle:noticias:responderAutor.html.twig', array(
+            'tabla' => $noticias,
+            'autorNo'=> $autorNo,
+            
+        ));
+    }
 }

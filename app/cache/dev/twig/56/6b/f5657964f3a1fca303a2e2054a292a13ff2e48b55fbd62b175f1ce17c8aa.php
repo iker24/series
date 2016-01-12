@@ -28,7 +28,9 @@ class __TwigTemplate_566bf5657964f3a1fca303a2e2054a292a13ff2e48b55fbd62b175f1ce1
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "<h1>Series</h1>
+        echo "<h1>Series con ";
+        echo twig_escape_filter($this->env, (isset($context["nombreSerie"]) ? $context["nombreSerie"] : $this->getContext($context, "nombreSerie")), "html", null, true);
+        echo "</h1>
 
    
        
@@ -105,6 +107,6 @@ class __TwigTemplate_566bf5657964f3a1fca303a2e2054a292a13ff2e48b55fbd62b175f1ce1
 
     public function getDebugInfo()
     {
-        return array (  87 => 32,  80 => 27,  63 => 18,  58 => 16,  53 => 14,  46 => 12,  43 => 11,  39 => 10,  31 => 4,  28 => 3,);
+        return array (  89 => 32,  82 => 27,  65 => 18,  60 => 16,  55 => 14,  48 => 12,  45 => 11,  41 => 10,  31 => 4,  28 => 3,);
     }
 }

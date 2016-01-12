@@ -29,11 +29,8 @@ series_delete:
     defaults: { _controller: "uniSeriesBundle:series:delete" }
     requirements: { _method: post|delete }
     
-series_buscar:
-    path:     /buscar
-    defaults: { _controller: "uniSeriesBundle:series:buscarSeries" }
 
-series_responder:
-    path:     /responder
-    defaults: { _controller: "uniSeriesBundle:series:responderSeries" }
-    requirements: { _method: post|put }
+    
+    
+
+

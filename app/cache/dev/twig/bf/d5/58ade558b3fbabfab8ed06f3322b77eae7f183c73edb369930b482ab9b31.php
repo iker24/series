@@ -36,19 +36,19 @@ class __TwigTemplate_bfd558ade558b3fbabfab8ed06f3322b77eae7f183c73edb369930b482a
         echo "
 
         <ul class=\"record_actions\">
-    <li>
+    
         <a href=\"";
         // line 10
         echo $this->env->getExtension('routing')->getPath("series");
         echo "\">
             Back to the list
         </a>
-    </li>
+    
     <li>";
         // line 14
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</li>
-</ul>
+
 ";
     }
 

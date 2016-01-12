@@ -300,6 +300,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
             not_noticias_delete:
 
+            // noticias_buscar
+            if ($pathinfo === '/noticias/buscar') {
+                return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::buscarNoticiasAction',  '_route' => 'noticias_buscar',);
+            }
+
+            // noticias_responder
+            if ($pathinfo === '/noticias/responder') {
+                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                    $allow = array_merge($allow, array('POST', 'PUT'));
+                    goto not_noticias_responder;
+                }
+
+                return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::responderNoticiasAction',  '_route' => 'noticias_responder',);
+            }
+            not_noticias_responder:
+
         }
 
         if (0 === strpos($pathinfo, '/series')) {
@@ -359,22 +375,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'series_delete')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\seriesController::deleteAction',));
             }
             not_series_delete:
-
-            // series_buscar
-            if ($pathinfo === '/series/buscar') {
-                return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\seriesController::buscarSeriesAction',  '_route' => 'series_buscar',);
-            }
-
-            // series_responder
-            if ($pathinfo === '/series/responder') {
-                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                    $allow = array_merge($allow, array('POST', 'PUT'));
-                    goto not_series_responder;
-                }
-
-                return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\seriesController::responderSeriesAction',  '_route' => 'series_responder',);
-            }
-            not_series_responder:
 
         }
 

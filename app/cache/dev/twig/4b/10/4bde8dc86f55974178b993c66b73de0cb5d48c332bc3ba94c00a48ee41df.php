@@ -37,21 +37,21 @@ class __TwigTemplate_4b104bde8dc86f55974178b993c66b73de0cb5d48c332bc3ba94c00a48e
             ";
         // line 7
         $this->displayBlock('contenido', $context, $blocks);
-        // line 13
+        // line 15
         echo "        </div>
  
            <div id=\"menuLateral\">
             ";
-        // line 16
+        // line 18
         $this->displayBlock('menuLateral', $context, $blocks);
-        // line 19
+        // line 21
         echo "        </div>
  
         <div id=\"pie\">
             ";
-        // line 22
+        // line 24
         $this->displayBlock('pie', $context, $blocks);
-        // line 25
+        // line 27
         echo "        </div>
  
  
@@ -70,30 +70,27 @@ class __TwigTemplate_4b104bde8dc86f55974178b993c66b73de0cb5d48c332bc3ba94c00a48e
     public function block_contenido($context, array $blocks = array())
     {
         // line 8
-        echo "                 <a href=\"";
-        echo $this->env->getExtension('routing')->getPath("series");
-        echo "\"> Series</a>
-                  <a href=\"";
-        // line 9
-        echo $this->env->getExtension('routing')->getPath("noticias");
-        echo "\"> Noticias</a>
+        echo "                  
+                 
                   
                  
-                ";
+                
+                 
+              ";
     }
 
-    // line 16
+    // line 18
     public function block_menuLateral($context, array $blocks = array())
     {
-        // line 17
+        // line 19
         echo "                
                 ";
     }
 
-    // line 22
+    // line 24
     public function block_pie($context, array $blocks = array())
     {
-        // line 23
+        // line 25
         echo "                
                 ";
     }
@@ -110,6 +107,6 @@ class __TwigTemplate_4b104bde8dc86f55974178b993c66b73de0cb5d48c332bc3ba94c00a48e
 
     public function getDebugInfo()
     {
-        return array (  97 => 23,  94 => 22,  89 => 17,  86 => 16,  78 => 9,  73 => 8,  70 => 7,  55 => 25,  53 => 22,  48 => 19,  46 => 16,  41 => 13,  39 => 7,  34 => 4,  31 => 3,);
+        return array (  94 => 25,  91 => 24,  86 => 19,  83 => 18,  73 => 8,  70 => 7,  55 => 27,  48 => 21,  41 => 15,  34 => 4,  87 => 32,  80 => 27,  63 => 18,  58 => 16,  53 => 24,  46 => 18,  43 => 11,  39 => 7,  31 => 3,  28 => 3,);
     }
 }

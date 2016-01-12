@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Noticias</h1>
+
+    
+        <tbody>
+        {% for entity in tabla %}
+           
+                <a href="{{ path('noticias_show', { 'id': entity.id }) }}">{{ entity.tituloNoticias }}</a><br>
+                
+                 <img src="{{ asset('bundles/uniseries/imagenes/'~ entity.fotoNoticias  ~ '') }}" width=20% height=20%/>
+                 <br>
+                 {% if entity.fechaNoticias %}{{ entity.fechaNoticias|date('Y-m-d ') }}{% endif %}<br><br>
+                 <p>By: {{ entity.autorNoticias }}</p><br><br>
+               
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}

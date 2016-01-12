@@ -93,8 +93,8 @@ class __TwigTemplate_e6d670d2273d6ab2d04ad3e87464cfc7435f28708e7bd9d1f2106e15b7d
         
         <a href=\"";
         // line 19
-        echo $this->env->getExtension('routing')->getPath("series_buscar");
-        echo "\"> Buscar Series</a>
+        echo $this->env->getExtension('routing')->getPath("noticias_buscar");
+        echo "\"> Buscar Autor</a>
         ";
     }
 
@@ -124,6 +124,6 @@ class __TwigTemplate_e6d670d2273d6ab2d04ad3e87464cfc7435f28708e7bd9d1f2106e15b7d
 
     public function getDebugInfo()
     {
-        return array (  111 => 27,  105 => 23,  102 => 22,  96 => 19,  91 => 17,  82 => 15,  79 => 14,  71 => 7,  68 => 6,  62 => 5,  56 => 28,  54 => 27,  51 => 26,  49 => 22,  44 => 14,  36 => 10,  34 => 6,  30 => 5,  24 => 1,  87 => 16,  80 => 27,  63 => 18,  58 => 16,  53 => 14,  46 => 21,  43 => 11,  39 => 10,  31 => 4,  28 => 3,);
+        return array (  111 => 27,  105 => 23,  102 => 22,  96 => 19,  91 => 17,  87 => 16,  82 => 15,  79 => 14,  71 => 7,  68 => 6,  62 => 5,  56 => 28,  54 => 27,  51 => 26,  49 => 22,  46 => 21,  44 => 14,  36 => 10,  34 => 6,  30 => 5,  24 => 1,);
     }
 }
