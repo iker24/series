@@ -28,3 +28,5 @@ categorias_delete:
     path:     /{id}/delete
     defaults: { _controller: "uniSeriesBundle:categorias:delete" }
     requirements: { _method: post|delete }
+    
+    

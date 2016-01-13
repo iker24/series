@@ -243,63 +243,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/noticias')) {
-            // noticias
-            if (rtrim($pathinfo, '/') === '/noticias') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'noticias');
-                }
-
-                return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::indexAction',  '_route' => 'noticias',);
-            }
-
-            // noticias_show
-            if (preg_match('#^/noticias/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_show')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::showAction',));
-            }
-
-            // noticias_new
-            if ($pathinfo === '/noticias/new') {
-                return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::newAction',  '_route' => 'noticias_new',);
-            }
-
-            // noticias_create
-            if ($pathinfo === '/noticias/create') {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_noticias_create;
-                }
-
-                return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::createAction',  '_route' => 'noticias_create',);
-            }
-            not_noticias_create:
-
-            // noticias_edit
-            if (preg_match('#^/noticias/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_edit')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::editAction',));
-            }
-
-            // noticias_update
-            if (preg_match('#^/noticias/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                    $allow = array_merge($allow, array('POST', 'PUT'));
-                    goto not_noticias_update;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_update')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::updateAction',));
-            }
-            not_noticias_update:
-
-            // noticias_delete
-            if (preg_match('#^/noticias/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_noticias_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_delete')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::deleteAction',));
-            }
-            not_noticias_delete:
-
             // noticias_buscar
             if ($pathinfo === '/noticias/buscar') {
                 return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::buscarNoticiasAction',  '_route' => 'noticias_buscar',);
@@ -315,6 +258,66 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::responderNoticiasAction',  '_route' => 'noticias_responder',);
             }
             not_noticias_responder:
+
+            if (0 === strpos($pathinfo, '/noticias/conseguridad')) {
+                // noticias
+                if (rtrim($pathinfo, '/') === '/noticias/conseguridad') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'noticias');
+                    }
+
+                    return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::indexAction',  '_route' => 'noticias',);
+                }
+
+                // noticias_show
+                if (preg_match('#^/noticias/conseguridad/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_show')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::showAction',));
+                }
+
+                // noticias_new
+                if ($pathinfo === '/noticias/conseguridad/new') {
+                    return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::newAction',  '_route' => 'noticias_new',);
+                }
+
+                // noticias_create
+                if ($pathinfo === '/noticias/conseguridad/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_noticias_create;
+                    }
+
+                    return array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::createAction',  '_route' => 'noticias_create',);
+                }
+                not_noticias_create:
+
+                // noticias_edit
+                if (preg_match('#^/noticias/conseguridad/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_edit')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::editAction',));
+                }
+
+                // noticias_update
+                if (preg_match('#^/noticias/conseguridad/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_noticias_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_update')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::updateAction',));
+                }
+                not_noticias_update:
+
+                // noticias_delete
+                if (preg_match('#^/noticias/conseguridad/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_noticias_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'noticias_delete')), array (  '_controller' => 'uni\\Bundle\\SeriesBundle\\Controller\\noticiasController::deleteAction',));
+                }
+                not_noticias_delete:
+
+            }
 
         }
 

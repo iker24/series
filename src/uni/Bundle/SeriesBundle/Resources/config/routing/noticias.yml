@@ -1,35 +1,3 @@
-noticias:
-    path:     /
-    defaults: { _controller: "uniSeriesBundle:noticias:index" }
-
-noticias_show:
-    path:     /{id}/show
-    defaults: { _controller: "uniSeriesBundle:noticias:show" }
-
-noticias_new:
-    path:     /new
-    defaults: { _controller: "uniSeriesBundle:noticias:new" }
-
-noticias_create:
-    path:     /create
-    defaults: { _controller: "uniSeriesBundle:noticias:create" }
-    requirements: { _method: post }
-
-noticias_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "uniSeriesBundle:noticias:edit" }
-
-noticias_update:
-    path:     /{id}/update
-    defaults: { _controller: "uniSeriesBundle:noticias:update" }
-    requirements: { _method: post|put }
-
-noticias_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "uniSeriesBundle:noticias:delete" }
-    requirements: { _method: post|delete }
-
-
 noticias_buscar:
     path:     /buscar
     defaults: { _controller: "uniSeriesBundle:noticias:buscarNoticias" }
@@ -38,3 +6,7 @@ noticias_responder:
     path:     /responder
     defaults: { _controller: "uniSeriesBundle:noticias:responderNoticias" }
     requirements: { _method: post|put }
+    
+uni_series_noticias:
+    resource: "@uniSeriesBundle/Resources/config/routing/conseguridad/noticiasSeguridad.yml"
+    prefix:   /conseguridad
